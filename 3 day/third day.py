@@ -1,4 +1,4 @@
-def day3(square):
+def day3(square, indR, indC):
 
     rows = len(square)
     col = len(square[0])
@@ -10,8 +10,8 @@ def day3(square):
 
     while rowIndex < rows - 1:
 
-        rowIndex += 1
-        colIndex += 3
+        rowIndex += indR
+        colIndex += indC
 
         if colIndex >= col:
             colIndex -= col
@@ -29,4 +29,5 @@ with open("map.txt", "r") as inputFile:
     inputMap = [ list(line.strip()) for line in fileLines]
     #print(inputMap[:3])
 
-print(day3(inputMap))
+print(day3(inputMap, 1, 3))
+print(day3(inputMap, 1,1) * day3(inputMap, 1,3) * day3(inputMap, 1,5) * day3(inputMap, 1,7) * day3(inputMap, 2,1))
