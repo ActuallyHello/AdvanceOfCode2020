@@ -29,5 +29,5 @@ with open("map.txt", "r") as inputFile:
     inputMap = [ list(line.strip()) for line in fileLines]
     #print(inputMap[:3])
 
-print(day3(inputMap, 1, 3))
-print(day3(inputMap, 1,1) * day3(inputMap, 1,3) * day3(inputMap, 1,5) * day3(inputMap, 1,7) * day3(inputMap, 2,1))
+print("part 1 -> ",day3(inputMap, 1, 3))
+print("part 2 -> ",day3(inputMap, 1,1) * day3(inputMap, 1,3) * day3(inputMap, 1,5) * day3(inputMap, 1,7) * day3(inputMap, 2,1))
